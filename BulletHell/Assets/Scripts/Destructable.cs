@@ -65,7 +65,7 @@ public class Destructable : MonoBehaviour
     void respawn()
     {
         gameObject.SetActive (true);
-        transform.position = new Vector2(11, 0);
+        transform.position = new Vector2(15, 0);
 
     }
 }

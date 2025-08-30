@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6300617666600665567}
   - component: {fileID: 5841693482309994388}
   - component: {fileID: 6213611606094519220}
+  - component: {fileID: 300614911846598922}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -178,3 +179,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2910a148a21a34ead7866c44132236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Destructable
+  Boss: 1
+--- !u!114 &300614911846598922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282945381474532492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f47403c546af7540850933612bf2ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossMovement
+  amplitude: 3
+  speed: 3

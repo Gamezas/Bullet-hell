@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.Interactions;
 
 public class Player : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class Player : MonoBehaviour
     private Vector2 input;
 
     bool shoot;
+    bool slow;
+
+    int hp = 3;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +32,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
 
@@ -58,8 +63,13 @@ public class Player : MonoBehaviour
         {
             if(bullet.Enemy)
             {
-                Destroy(gameObject);
+                hp -= 1;
                 Destroy(bullet.gameObject);
+                if(hp == 0)
+                {
+                    Destroy(gameObject);
+                }
+
             }
         }
 

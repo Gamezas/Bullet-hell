@@ -4,6 +4,9 @@ using UnityEngine;
 public class Destructable : MonoBehaviour
 {
     bool Destroyable = false;
+    public bool Boss = false;
+    int hp = 100;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,16 +33,39 @@ public class Destructable : MonoBehaviour
         {
             return;
         }
-
         Bullet bullet = collision.GetComponent<Bullet>();
-        if(bullet != null)
+
+        if (Boss)
+        {
+            if (!bullet.Enemy)
+            {
+                hp -= 1;
+                Destroy(bullet.gameObject);
+                if(hp == 0)
+                {
+                    Destroy(gameObject);
+                }
+            }
+
+            return;
+        }
+
+        if (bullet != null)
         {
             if(!bullet.Enemy)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
                 Destroy(bullet.gameObject);
+                respawn();
             }
             
         }
+    }
+
+    void respawn()
+    {
+        gameObject.SetActive (true);
+        transform.position = new Vector2(11, 0);
+
     }
 }

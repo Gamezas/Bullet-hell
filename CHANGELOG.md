@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- v1.1 Brazilian Portuguese translation.
-- v1.1 German Translation
-- v1.1 Spanish translation.
+Player Model (27/08/2025)
+Enemy Model (27/08/2025)
+Bullet Models (27/08/2025)
+Player movement (27/08/2025)
+Bullet scripts (27/08/2025)
+Sin Movement (28/08/2025)
+Sin Bullet (28/08/2025)
+Sin Enemies (28/08/2025)
+Skeleton Boss Simple Bullet (28/08/2025)
+
